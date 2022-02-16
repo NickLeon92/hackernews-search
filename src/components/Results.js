@@ -32,7 +32,7 @@ function Results(){
                             <Card.Text>
                                 relevancy score: {el.relevancy_score}
                             </Card.Text>
-                            <Card.Link href={el.url}>Full Article</Card.Link>
+                            <Card.Link href={el.url} target="_blank">Full Article</Card.Link>
                         </Card.Body>
                     </Card>
                 )

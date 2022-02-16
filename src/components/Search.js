@@ -31,11 +31,11 @@ function Search(){
                     setSearch('')
                 }}
                 >
-                    Button
+                    Search
                 </Button>
             </InputGroup>
         </div>
-        <Results search={search}/>
+        <Results />
         </div>
     )
 
