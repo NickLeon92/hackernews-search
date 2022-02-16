@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {useDispatch} from "react-redux"
 import { updateHistory } from "../features/terms";
 import {InputGroup, Button, FormControl} from 'react-bootstrap'
+import Results from './Results'
 
 function Search(){
 
@@ -10,6 +11,7 @@ function Search(){
     const dispatch = useDispatch()
 
     return (
+        <div>
         <div className="search-bar">
             <InputGroup className="mb-3">
                 <FormControl
@@ -32,6 +34,8 @@ function Search(){
                     Button
                 </Button>
             </InputGroup>
+        </div>
+        <Results search={search}/>
         </div>
     )
 
