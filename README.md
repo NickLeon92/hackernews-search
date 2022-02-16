@@ -1,6 +1,6 @@
 # HackerNews Search Engine
 
-A Node JS application
+A Node JS and React Redux application
 
 News for Hackers. Search for something tech related to pull up articles!
 
