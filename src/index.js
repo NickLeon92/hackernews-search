@@ -3,10 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {configureStore} from '@reduxjs/toolkit'
+import { Provider } from 'react-redux';
+import termReducer from './features/terms'
+
+const store = configureStore({
+  reducer: {
+    terms: termReducer,
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
