@@ -1,20 +1,24 @@
 import React from 'react'
 import {useSelector} from "react-redux"
+import {ListGroup, Container} from 'react-bootstrap'
 
 function History(){
 
     const searchHistory = useSelector((state) => state.terms)
 
     return(
-        <div>
+        <Container style={{width:'50%'}}>
             {searchHistory.length? (
-            searchHistory.map(el => {
-                return <p>{el}</p>
-            })
+            <ListGroup style={{marginTop:'1rem'}}>
+            <h1 style={{marginBottom:'1rem'}}>Search History</h1>
+            {searchHistory.map(el => {
+                return <ListGroup.Item>{el}</ListGroup.Item>
+            })}
+            </ListGroup>
             ) : (
-            <p>nothing in your history!</p>
+            <h3>nothing in your history!</h3>
             )}
-        </div>
+        </Container>
     )
 
 }
